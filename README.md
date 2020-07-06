@@ -1,5 +1,5 @@
 # dotfiles
-I Desided to keep my dotfiles with i use on github to back them up 
+I decided to keep my dotfiles on github to have backup
 
 
 
