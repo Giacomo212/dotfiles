@@ -5,8 +5,8 @@ alias data='cd /mnt/data'
 alias linux='cd /mnt/linux'
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export PATH="$PATH:/home/marcin/.dotnet/tools"
-
-
+#automatic decopress
+######################################################################
 ex ()
 {
   if [ -f $1 ] ; then
@@ -32,7 +32,22 @@ ex ()
   fi
 }
 
+#dotnet autocomplete
+###############################################################################################
+_dotnet_bash_complete()
+{
+  local word=${COMP_WORDS[COMP_CWORD]}
 
+  local completions
+  completions="$(dotnet complete --position "${COMP_POINT}" "${COMP_LINE}" 2>/dev/null)"
+  if [ $? -ne 0 ]; then
+    completions=""
+  fi
+
+  COMPREPLY=( $(compgen -W "$completions" -- "$word") )
+}
+
+complete -f -F _dotnet_bash_complete dotnet
 
 
 
