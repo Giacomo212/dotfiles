@@ -8,7 +8,7 @@ alias data='cd /mnt/data'
 alias linux='cd /mnt/linux'
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export PATH="$PATH:/home/marcin/.dotnet/tools"
-#automatic decopress
+#automatic extract 
 ######################################################################
 ex ()
 {
