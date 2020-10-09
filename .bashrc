@@ -6,8 +6,10 @@ alias ls='ls --color=auto -h'
 alias ll='ls --color=auto -lah'
 alias data='cd /mnt/data'
 alias linux='cd /mnt/linux'
+export MOZ_X11_EGL=1
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
-export PATH="$PATH:/home/marcin/.dotnet/tools"
+export PATH="$PATH:~/.dotnet/tools"
+export PATH="$PATH:~/.cargo/bin"
 #automatic extract 
 ######################################################################
 ex ()
